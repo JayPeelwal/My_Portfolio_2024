@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@font-face {
+    font-family: 'Gilroy';
+    src: url(gilroy/Gilroy-Regular.ttf) format('Truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mazius Italic';
+    src: url(MaziusDisplay/Mazius.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy", sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Main page starts here  */
+
+#main {
+    width: 100%;
+}
+
+
+/*This is the loader animation starts here the home page animation starts here*/
+
+#loader #topheading {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#topheading h5 {
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#loader {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    color: rgb(255, 255, 254);
+}
+
+
+/*starting animated text starts here*/
+
+#loader h1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vw;
+    font-weight: 300;
+}
+
+#loader h1 span {
+    font-size: 5vw;
+    font-family: 'Gilroy' sans-serif;
+}
+
+.maz {
+    font-family: 'Mazius Italic';
+    color: #14cf93;
+    font-weight: 100;
+}
+
+.reveal .parent {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.reveal .parent .child {
+    display: block;
+}
+
+.child span {
+    display: inline-block;
+}
+
+
+/*starting animated text starts here*/
+
+#green {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    top: 100%;
+    height: 0vh;
+    background-color: #14cf93;
+}
+
+
+/*Now the home page starts here that contained all the pages and tempates*/
+
+#home {
+    width: 100%;
+    height: 150vh;
+}
+
+#nav {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    background-color: transparent;
+    /* Make the nav background transparent */
+    position: fixed;
+    /* Make the nav fixed */
+    top: 0;
+    /* Stick to the top */
+    /* Stick to the left edge */
+    z-index: 1000;
+    /* Ensure it stays above other content */
+}
+
+#nav a {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    color: #383838;
+}
+
+
+/* Animated Lines of the nav bottom  */
+
+#nav a .line {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    height: 1.5px;
+    background-color: #383838;
+}
+
+#line1 {
+    left: 0;
+    width: 0%;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition-delay: .1s;
+}
+
+#line2 {
+    right: 0;
+    width: 100%;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+#nav a:hover #line2 {
+    width: 0%;
+    height: 0.7px;
+}
+
+#nav a:hover #line1 {
+    width: 100%;
+    height: 0.7px;
+}
+
+
+/* First templets of the home page that contains creative web designer text and more subheading in it */
+
+.text-revel-container {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-revel-container-child {
+    position: absolute;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    color: #383838;
+    line-height: 1.2;
+    align-items: center;
+    padding: 0 5.2vw;
+    font-family: 'Gilroy' sans-serif;
+}
+
+.row h1 {
+    font-size: 12.5vw;
+    font-weight: 600;
+    margin-bottom: -3vw;
+}
+
+.row .text {
+    margin-bottom: 3vw;
+    margin-right: 3vw;
+}
+
+.row h5 {
+    opacity: 0.5;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: 'Mazius Italic';
+}
+
+.row:nth-child(3) {
+    margin-top: 0vw;
+}
+
+.row .arrow {
+    margin-top: 8vw;
+}
+
+.row svg {
+    margin-top: 4.2vw;
+    height: 8vw;
+    margin-bottom: 0;
+    margin-left: 10vw;
+}
+
+path,
+polyline {
+    stroke: #14cf93;
+}
+
+
+/*Second templete of the home page that starts here with the rotate images and text*/
+
+#imagery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 9vw;
+    width: 100%;
+    padding: 5vw 6vw;
+    position: relative;
+    z-index: 3;
+}
+
+#imagery #imglef {
+    width: 30%;
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+#imglef h1 {
+    font-size: 2.3vw;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #383838;
+}
+
+#imglef h1 span {
+    font-size: 2.3vw;
+    font-weight: 500;
+    color: #14cf93;
+    font-family: 'Mazius Italic';
+}
+
+#imgrig {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 60%;
+    height: 300px;
+    right: 55px;
+}
+
+#imgrig .imgcntnr {
+    width: 28vw;
+    position: absolute;
+    filter: grayscale();
+    border-radius: 1.5vw;
+    height: 45.5vw;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    box-shadow: 0 0 20px rgba(20, 207, 147, 0.6);
+}
+
+#imgrig .imgcntnr:hover {
+    filter: grayscale(0);
+}
+
+#imgrig .imgcntnr:nth-child(1) {
+    transform: translate(-25%, -8%) rotate(-18deg);
+    background-image: url(media/web-project-img01.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 20px rgba(219, 156, 63, 0.6);
+}
+
+#imgrig .imgcntnr:nth-child(2) {
+    transform: translate(7%, 5%) rotate(-10deg);
+    background-image: url(media/web-project-img02.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 20px rgba(50, 138, 26, 0.6);
+}
+
+#imgrig .imgcntnr:nth-child(3) {
+    transform: translate(37%, 22%) rotate(-8deg);
+    background-image: url(media/web-project-img03.jpg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 20px rgba(232, 108, 241, 0.6);
+}
+
+
+/*The third template of the home page is work this template contains all the images related of the projects or we
+    can say that a kind of animation images contain for there projects (A javascript function)*/
+
+#work {
+    margin-top: 15vw;
+    position: absolute;
+    width: 100%;
+    min-height: 100vw;
+    background-color: #f2f2f2;
+    padding-top: 250px;
+    transition: background-color cubic-bezier(0.19, 1, 0.22, 1) 2s;
+}
+
+
+/*The work pseudo element is for the png image that setted in the top of the work section*/
+
+#work::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    top: -75px;
+    background-image: url(https://abhishekjha.me/rip.f6d7c4dd.svg);
+    background-size: cover;
+    transform: rotate(180deg);
+}
+
+
+/*This section contains all the arrow image, text and the bottom line that divides feat works and skills section */
+
+.lefarrow {
+    margin-bottom: 2vw;
+    margin-left: 7vw;
+    width: 5vw;
+    transform: rotate(-90deg);
+}
+
+#profession {
+    position: relative;
+    margin-left: 18vw;
+}
+
+#profession .work_text {
+    display: inline-block;
+    margin-left: 1vw 18vw;
+}
+
+#profession .work_text h5 {
+    font-size: 0.8vw;
+    font-weight: 100;
+    color: #a3a3a3;
+    text-transform: uppercase;
+}
+
+#profession .work_text h5 span {
+    color: #a3a3a3;
+    font-weight: 100;
+}
+
+#profession h1 {
+    margin-top: 1.7vw;
+    font-size: 1.3vw;
+    font-weight: 500;
+    color: #383838;
+    text-transform: uppercase;
+}
+
+.border {
+    height: 100%;
+    display: flex;
+    width: 100%;
+    padding: 8vw 0;
+    margin-left: 18vw;
+    margin-right: 5vw;
+}
+
+.bottom-line {
+    width: 77%;
+    color: #383838;
+    border-bottom: 0.5px solid#a3a3a3;
+    ;
+}
+
+#work .workflow {
+    display: flex;
+    padding-left: 18vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.workflow h1 {
+    display: flex;
+    font-size: 8.8vw;
+    font-weight: 600;
+    color: #383838;
+    align-items: baseline;
+}
+
+.workflow h1 .mini {
+    font-size: 1.4vw;
+    font-weight: 500;
+    color: #383838;
+    margin-left: 3vw;
+}
+
+.o-ui-arrow {
+    margin-right: 10vw;
+    width: 4vw;
+    align-items: center;
+    transform: rotate(90deg);
+}
+
+.o-ui-arrow path {
+    stroke: rgb(196, 196, 196);
+}
+
+
+/*The section starts here that we were talking about like projects images that contains a type of function */
+
+#images {
+    margin-top: 6vw;
+    margin-bottom: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    /* position: relative; */
+    padding-left: 6vw;
+}
+
+.cnt {
+    overflow: hidden;
+    border-radius: 60px;
+}
+
+.cnt img {
+    transition: filter cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    width: 107%;
+    background-color: #fff;
+}
+
+.cnt1 {
+    width: 52%;
+}
+
+.cnt2 {
+    width: 32.5%;
+    height: 80vh;
+    margin-right: 9vw;
+    margin-bottom: -18vw;
+}
+
+.cnt3 {
+    height: 100vh;
+    width: 55%;
+    margin-top: 6vw;
+    margin-left: 15vw;
+}
+
+.cnt4 {
+    width: 32%;
+    height: 65vh;
+    margin-top: 35vw;
+    margin-left: 2vw;
+}
+
+.cnt5 {
+    width: 52%;
+    height: 100vh;
+    margin-right: 5vw;
+    margin-top: -6vw;
+}
+
+
+/* this is the hidden function or a kind of animation that we put on the projects images when we hover on the projects section we find this animation working  */
+
+#cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 17vw;
+    z-index: 999999;
+  
+}
+/* #cursor img {
+    position: absolute;
+        opacity: 0;
+        
+    
+} */
+#cursor>div {
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s ease, transform 0.1s ease;
+}
+
+#elem {
+    display: none;
+    /* Hide by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#elem img {
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    /* Start with opacity 0 */
+    transition: opacity 0.3s ease;
+}
+
+#elem.active {
+    display: block;
+    /* Show when active */
+}
+#cursor .crow {
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: .7vw;
+}
+
+.crow .ccircle {
+    width: 3vw;
+    height: 3vw;
+    border: 2px solid rgb(124, 118, 107);
+    border-radius: 50%;
+}
+
+.crow .ccapsule {
+    padding: .7vw 3vw;
+    border: 2px solid rgb(94, 94, 94);
+    border-radius: 100px;
+}
+
+#elem img {
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+    animation: an 4s linear infinite;
+}
+
+#elem img:nth-child(2) {
+    animation-delay: 1s;
+}
+
+#elem img:nth-child(3) {
+    animation-delay: 2s;
+}
+
+#elem img:nth-child(4) {
+    animation-delay: 3s;
+}
+
+#elem img:nth-child(5) {
+    animation-delay: 4s;
+}
+
+@keyframes an {
+    0%,
+    20% {
+        opacity: 1;
+    }
+    21%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.demo {
+    min-height: 450vw;
+}
